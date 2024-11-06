@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import './styles.css';
+import CarForm from './components/Carform';
+import CarList from './components/CarList';
+import CarSearch from './components/CarSearch';
+import CarValue from './components/CarValue';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container is-fluid'>
+        <header className="App-header">
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <div className='title-landing'>
+            <h4 className='subtitle is-2'>Car App</h4>
+          </div>
+          <CarForm />
+          <CarSearch />
+          <CarList />
+          <CarValue />
+        </header>
+      </div>
     </div>
   );
 }
